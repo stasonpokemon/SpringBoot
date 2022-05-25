@@ -21,9 +21,27 @@ public class EmployeeController {
         return employees;
     }
 
+    @GetMapping("/employees/{id}")
+    public Employee getEmployee(@PathVariable("id") int employeeId) {
+        Employee employee = employeeService.readEmployee(employeeId);
+        return employee;
+    }
+
     @PostMapping("/employees")
     public Employee addNewEmployee(@RequestBody Employee employee) {
         employeeService.saveEmployee(employee);
         return employee;
+    }
+
+    @PutMapping("/employees")
+    public Employee updateEmployee(@RequestBody Employee employee) {
+        employeeService.saveEmployee(employee);
+        return employee;
+    }
+
+    @DeleteMapping("/employees/{id}")
+    public String deleteEmployee(@PathVariable("id") int employeeId) {
+        employeeService.deleteEmployee(employeeId);
+        return "Employee with id = " + employeeId + " was deleted";
     }
 }

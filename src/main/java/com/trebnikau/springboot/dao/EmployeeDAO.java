@@ -9,8 +9,8 @@ public interface EmployeeDAO {
     void saveEmployee(Employee employee);
 
     List<Employee> readAllEmployees();
-//
-//    Employee readEmployee(int employeeId);
-//
-//    void deleteEmployee(int employeeId);
+
+    Employee readEmployee(int employeeId);
+
+    void deleteEmployee(int employeeId);
 }

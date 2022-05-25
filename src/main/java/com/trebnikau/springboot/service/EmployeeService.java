@@ -8,8 +8,8 @@ public interface EmployeeService {
     void saveEmployee(Employee employee);
 
     List<Employee> readAllEmployees();
-//
-//    Employee readEmployee(int employeeId);
-//
-//    void deleteEmployee(int employeeId);
+
+    Employee readEmployee(int employeeId);
+
+    void deleteEmployee(int employeeId);
 }
